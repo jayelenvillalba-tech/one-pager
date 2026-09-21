@@ -101,7 +101,7 @@ function TarjetaPage() {
             </div>
 
             <p className="text-[9px] uppercase tracking-[0.18em] text-[#c5d4cf]">
-              Expo EXA · San Lorenzo · Sep 2026
+              San Lorenzo, Santa Fe · Argentina
             </p>
           </div>
         </CardSide>

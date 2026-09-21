@@ -122,6 +122,17 @@ export const sources: Source[] = [
     year: "2026",
     href: "https://www.boletinoficial.gob.ar/",
   },
+  {
+    id: "s13",
+    label: "13",
+    title:
+      "World Trade Report 2025: Inteligencia Artificial y Comercio Global — Crecimiento proyectado del +34% al +37% en el comercio de bienes y servicios para 2040 (+12-13% en PIB global)",
+    publisher: "Organización Mundial del Comercio (OMC)",
+    year: "2025",
+    href: "https://www.wto-ilibrary.org/content/books/9789287074560c001",
+    annotation:
+      "El informe destaca que las economías de ingresos medios y bajos pueden ser las más beneficiadas por la adopción de IA en comercio, con hasta +18,1 puntos porcentuales en crecimiento comercial.",
+  },
 ];
 
 export function cite(id: string) {
