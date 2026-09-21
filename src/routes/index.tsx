@@ -72,7 +72,6 @@ function Home() {
       <SolutionSteps />
       <InnovationNiche />
       <TerritorialAnchor />
-      <ProjectStatusAndBusinessModel />
       <LegalDisclaimer />
       <ContactSection />
       <Sources />
@@ -480,19 +479,19 @@ function SolutionSteps() {
     {
       k: "01",
       t: "Preparar",
-      d: "Evaluamos si tu producto y tu empresa están en condiciones reales de exportar, antes de gastar un peso en promoción comercial.",
-      tag: "Evaluación Real",
+      d: "Antes de invertir en promoción comercial, Che.Comex evalúa si la empresa está en condiciones legales, documentales y operativas de exportar — y qué le falta para estarlo.",
+      tag: "Evaluación Empresa",
     },
     {
       k: "02",
       t: "Validar",
-      d: "Te decimos qué necesitás, cuánto te va a costar y qué papeles pedir para esa operación puntual.",
+      d: "Para cada operación concreta, Che.Comex determina qué documentación corresponde y estima el costo total de ponerla en destino.",
       tag: "Certeza Operativa",
     },
     {
       k: "03",
       t: "Derivar",
-      d: "En el momento exacto, la operación se transfiere de forma fluida hacia el canal oficial o el despachante matriculado que corresponda. No cruzamos la puerta del Estado: dejamos a la PyME lista para operar.",
+      d: "Cuando la operación está lista, Che.Comex la deriva hacia el canal oficial o el despachante matriculado que corresponda. No cruza la puerta del Estado.",
       tag: "Traspaso Limpio",
     },
   ];
@@ -551,7 +550,7 @@ function SolutionSteps() {
   );
 }
 
-/* ─── 5. NICHO DE INNOVACIÓN (TAMAÑO, TIMING & IA EN COMERCIO) ─── */
+/* ─── 5. NICHO DE INNOVACIÓN (EL ARGUMENTO DE INVERSIÓN) ─── */
 
 function InnovationNiche() {
   return (
@@ -562,33 +561,47 @@ function InnovationNiche() {
             Nicho de Innovación
           </p>
           <h2 className="mt-3 font-display text-3xl leading-tight text-fg sm:text-5xl">
-            Un mercado récord, sin infraestructura que lo sostenga.
+            El próximo gran mercado del comercio exterior no lo van a abrir las multinacionales.
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
-            Argentina va camino a su año de exportaciones más alto de la historia. Miles de millones
-            de dólares en juego, un acuerdo con la Unión Europea recién habilitado, y una ola global
-            de IA en comercio que recién empieza y beneficia más a economías como la nuestra. Ese es
-            el tamaño del problema — y el tamaño de la oportunidad para quien lo resuelva primero.
-          </p>
+          <div className="mt-6 space-y-4 text-base leading-relaxed sm:text-lg">
+            <p className="text-paper">
+              Argentina va camino a su año de exportaciones más alto de la historia — pero ese récord
+              lo siguen sosteniendo las mismas empresas de siempre. El 90% de las compañías del país
+              son PyMEs, y sin embargo solo el 8% de ellas logra exportar de forma sostenida. No es
+              un problema de producto ni de demanda: es que todavía nadie construyó la
+              infraestructura que las lleve de la fábrica al mundo.
+            </p>
+            <p className="text-muted">
+              Esa brecha se abre justo cuando más conviene cerrarla. El acuerdo MERCOSUR-UE recién
+              entró en vigencia y habilita un mercado de 500 millones de consumidores con arancel
+              cero. Al mismo tiempo, la ola global de inteligencia artificial aplicada al comercio
+              recién empieza — la OMC proyecta que puede impulsar el comercio mundial hasta un 37%
+              para 2040, con las economías emergentes como las más beneficiadas.
+            </p>
+            <p className="font-medium text-fg border-l-2 border-accent/50 pl-4 italic">
+              Quien construya esa infraestructura ahora no está entrando a pelear una porción de un
+              negocio que ya existe. Está construyendo la categoría.
+            </p>
+          </div>
         </div>
       </Reveal>
 
-      <div className="mt-12 grid gap-6 sm:grid-cols-3">
-        {/* A. Tamaño del Mercado */}
+      {/* 4 Tarjetas de Respaldo Cuantitativo */}
+      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/* 1. Récord Nacional */}
         <Reveal delay={0}>
-          <div className="glass-card flex h-full flex-col justify-between rounded-2xl p-6 sm:p-8">
+          <div className="glass-card flex h-full flex-col justify-between rounded-2xl p-6 sm:p-7">
             <div>
               <div className="flex size-10 items-center justify-center rounded-lg bg-accent/15 text-accent">
                 <TrendingUp className="size-5" />
               </div>
-              <p className="stat-value mt-4 font-display text-4xl sm:text-5xl">
+              <p className="stat-value mt-4 font-display text-3xl sm:text-4xl">
                 <AnimatedCounter value={103} suffix=" mil M" prefix="USD " decimals={0} />
               </p>
-              <h3 className="mt-2 font-display text-xl text-fg">Proyección Récord Nacional</h3>
-              <p className="mt-3 text-xs leading-relaxed text-muted">
-                Proyecciones oficiales y sectoriales ubican las exportaciones de 2026 entre USD
-                103.200 M (CERA) y USD 103.740 M (LCG), tras un acumulado enero-julio que creció{" "}
-                <strong className="text-fg">+22,9%</strong> interanual.
+              <h3 className="mt-2 font-display text-lg text-fg">Récord Nacional</h3>
+              <p className="mt-2.5 text-xs leading-relaxed text-muted">
+                Proyecciones oficiales 2026 de USD 103.200 M (CERA) y USD 103.740 M (LCG), tras un
+                crecimiento del +22,9% ene-jul.
                 <Cite n="8" />
               </p>
             </div>
@@ -596,48 +609,66 @@ function InnovationNiche() {
           </div>
         </Reveal>
 
-        {/* B. Timing: MERCOSUR-UE */}
-        <Reveal delay={120}>
-          <div className="glass-card flex h-full flex-col justify-between rounded-2xl p-6 sm:p-8">
+        {/* 2. Gap PyME (90% vs 8%) */}
+        <Reveal delay={80}>
+          <div className="glass-card flex h-full flex-col justify-between rounded-2xl p-6 sm:p-7">
+            <div>
+              <div className="flex size-10 items-center justify-center rounded-lg bg-accent/15 text-accent">
+                <Scale className="size-5" />
+              </div>
+              <p className="stat-value mt-4 font-display text-3xl sm:text-4xl">
+                <span>90% vs 8%</span>
+              </p>
+              <h3 className="mt-2 font-display text-lg text-fg">Brecha Estructural</h3>
+              <p className="mt-2.5 text-xs leading-relaxed text-muted">
+                El 90% de las firmas son PyMEs, pero solo el 8% logra exportar de forma sostenida en
+                el tiempo. Un vacío masivo desatendido.
+                <Cite n="1" />
+              </p>
+            </div>
+            <p className="mt-4 text-[11px] text-accent font-medium">El Problema Real</p>
+          </div>
+        </Reveal>
+
+        {/* 3. Ventana MERCOSUR-UE */}
+        <Reveal delay={160}>
+          <div className="glass-card flex h-full flex-col justify-between rounded-2xl p-6 sm:p-7">
             <div>
               <div className="flex size-10 items-center justify-center rounded-lg bg-accent/15 text-accent">
                 <Globe2 className="size-5" />
               </div>
-              <p className="stat-value mt-4 font-display text-4xl sm:text-5xl">
+              <p className="stat-value mt-4 font-display text-3xl sm:text-4xl">
                 <span>Ley 27.800</span>
               </p>
-              <h3 className="mt-2 font-display text-xl text-fg">Ventana MERCOSUR–UE</h3>
-              <p className="mt-3 text-xs leading-relaxed text-muted">
-                Con aplicación provisional desde mayo 2026, el acuerdo birregional abre un mercado
-                de 500 millones de consumidores con arancel cero para miles de posiciones. El timing
-                para construir la infraestructura digital es hoy.
+              <h3 className="mt-2 font-display text-lg text-fg">Mercado de 500M</h3>
+              <p className="mt-2.5 text-xs leading-relaxed text-muted">
+                Aplicación provisional del acuerdo con la Unión Europea con arancel cero y
+                declaración de origen simplificada en factura.
                 <Cite n="10" />
               </p>
             </div>
-            <p className="mt-4 text-[11px] text-accent font-medium">Ventana de Oportunidad</p>
+            <p className="mt-4 text-[11px] text-accent font-medium">Ventana Concreta</p>
           </div>
         </Reveal>
 
-        {/* C. Tendencia Global de IA (OMC World Trade Report 2025) */}
+        {/* 4. Tendencia Global IA (OMC) */}
         <Reveal delay={240}>
-          <div className="glass-card flex h-full flex-col justify-between rounded-2xl p-6 sm:p-8 border-accent/40">
+          <div className="glass-card flex h-full flex-col justify-between rounded-2xl p-6 sm:p-7 border-accent/40">
             <div>
               <div className="flex size-10 items-center justify-center rounded-lg bg-accent/15 text-accent">
                 <Cpu className="size-5" />
               </div>
-              <p className="stat-value mt-4 font-display text-4xl sm:text-5xl">
+              <p className="stat-value mt-4 font-display text-3xl sm:text-4xl">
                 <span>+34% a 37%</span>
               </p>
-              <h3 className="mt-2 font-display text-xl text-fg">Crecimiento Global vía IA</h3>
-              <p className="mt-3 text-xs leading-relaxed text-muted">
-                Crecimiento potencial del comercio mundial de bienes y servicios para 2040 gracias a
-                la IA, según el World Trade Report 2025 de la OMC. El aumento del PIB global asociado
-                sería de 12-13%, y las economías de ingresos medios y bajos podrían ser las más
-                beneficiadas (hasta +18,1 puntos en su crecimiento comercial).
+              <h3 className="mt-2 font-display text-lg text-fg">Impulso Global IA</h3>
+              <p className="mt-2.5 text-xs leading-relaxed text-muted">
+                Crecimiento proyectado del comercio mundial a 2040 por adopción de IA (OMC World
+                Trade Report 2025, +12-13% en PIB global).
                 <Cite n="13" />
               </p>
             </div>
-            <p className="mt-4 text-[11px] text-accent font-medium">World Trade Report · OMC</p>
+            <p className="mt-4 text-[11px] text-accent font-medium">Construir la Categoría</p>
           </div>
         </Reveal>
       </div>
@@ -726,118 +757,7 @@ function TerritorialAnchor() {
   );
 }
 
-/* ─── 7. ESTADO REAL & MODELO DE NEGOCIO ─── */
 
-function ProjectStatusAndBusinessModel() {
-  return (
-    <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-      <div className="grid gap-12 md:grid-cols-2 md:items-start">
-        {/* Estado Real del Proyecto */}
-        <Reveal variant="left">
-          <p className="text-xs uppercase tracking-[0.2em] text-accent">Transparencia Operativa</p>
-          <h2 className="mt-3 font-display text-3xl text-fg sm:text-4xl">
-            Estado de situación del proyecto
-          </h2>
-          <p className="mt-4 text-sm leading-relaxed text-muted">
-            Un inversor o una institución necesitan saber con total claridad dónde está parado el
-            proyecto hoy y cuáles son los próximos hitos a cumplir.
-          </p>
-
-          <div className="mt-6 space-y-4 text-sm">
-            <div className="flex items-start gap-3 rounded-lg border border-border bg-bg-elevated p-4">
-              <CheckCircle2 className="size-5 text-accent shrink-0 mt-0.5" />
-              <div>
-                <strong className="text-fg">Arquitectura Conceptual & Tesis:</strong>
-                <p className="mt-1 text-xs text-muted">
-                  Modelado completo del flujo operativo, taxonomía de organismos verificados y
-                  análisis de viabilidad técnica concluidos.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3 rounded-lg border border-border bg-bg-elevated p-4">
-              <CheckCircle2 className="size-5 text-accent shrink-0 mt-0.5" />
-              <div>
-                <strong className="text-fg">Propiedad Intelectual & Marca:</strong>
-                <p className="mt-1 text-xs text-muted">
-                  Registro de marca y documentación de arquitectura de software en trámite formal de
-                  protección.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3 rounded-lg border border-accent/40 bg-accent/5 p-4">
-              <ShieldCheck className="size-5 text-accent shrink-0 mt-0.5" />
-              <div>
-                <strong className="text-fg">Próximo Hito Crítico:</strong>
-                <p className="mt-1 text-xs text-muted">
-                  Desarrollo del motor de IA contextual y construcción del MVP operativo para
-                  validación en campo con las primeras PyMEs en programa piloto.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-
-        {/* Modelo de Ingresos & Liderazgo */}
-        <Reveal variant="right">
-          <div className="glass-card rounded-2xl p-6 sm:p-8">
-            <p className="text-xs uppercase tracking-wider text-accent font-semibold">
-              Modelo de Monetización B2B
-            </p>
-            <h3 className="mt-1 font-display text-2xl text-fg">Modelo de negocio escalable</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted">
-              Estructura de ingresos diseñada para garantizar sostenibilidad y alineación de
-              incentivos:
-            </p>
-
-            <div className="mt-6 space-y-4 text-xs text-muted">
-              <div className="border-b border-border/80 pb-3">
-                <div className="flex justify-between font-medium text-fg">
-                  <span>1. Suscripciones SaaS PyME</span>
-                  <span className="text-accent">Ingreso Recurrente</span>
-                </div>
-                <p className="mt-1 leading-relaxed">
-                  Planes modulares con acceso al motor de evaluación, estimación de costos y memoria
-                  operativa continua.
-                </p>
-              </div>
-
-              <div className="border-b border-border/80 pb-3">
-                <div className="flex justify-between font-medium text-fg">
-                  <span>2. Cuentas Institucionales & Cámaras</span>
-                  <span className="text-accent">Convenios B2G / B2B</span>
-                </div>
-                <p className="mt-1 leading-relaxed">
-                  Homologación masiva de padrones industriales para municipios, agencias de
-                  desarrollo y cámaras sectoriales.
-                </p>
-              </div>
-
-              <div>
-                <div className="flex justify-between font-medium text-fg">
-                  <span>3. Servicios Profesionales Verificados</span>
-                  <span className="text-accent">Transaccional</span>
-                </div>
-                <p className="mt-1 leading-relaxed">
-                  Derivación calificada de operaciones preparadas hacia despachantes de aduana y
-                  operadores logísticos de confianza.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-6 border-t border-border pt-4 text-xs">
-              <p className="text-muted">
-                Liderado por: <strong className="text-fg">Jezabel Ayelén Villalba</strong> —
-                Fundadora & Directora de Proyecto · San Lorenzo, Santa Fe.
-              </p>
-            </div>
-          </div>
-        </Reveal>
-      </div>
-    </section>
-  );
-}
 
 /* ─── 8. DESLINDE LEGAL / ALCANCE OPERATIVO ─── */
 
@@ -912,8 +832,7 @@ function ContactSection() {
   const [message, setMessage] = useState("");
 
   // Web3Forms Access Key
-  // Si no hay key configurada todavía, Web3Forms permite setear la access_key
-  const WEB3FORMS_ACCESS_KEY = "80f845d0-9d0b-4654-8c87-8d5f3089d816";
+  const WEB3FORMS_ACCESS_KEY = "985974a9-1f05-4996-9487-bced6834ddfd";
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
