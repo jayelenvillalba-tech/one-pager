@@ -124,12 +124,6 @@ function Header() {
           <a href="#fuentes" className="transition-colors hover:text-fg">
             Fuentes
           </a>
-          <a
-            href="/tarjeta"
-            className="rounded-md border border-accent/30 bg-accent/10 px-2.5 py-1 text-xs text-accent transition-colors hover:bg-accent/20"
-          >
-            Tarjeta QR
-          </a>
         </nav>
         <Button asChild size="sm">
           <a href="#contacto">Agendar Reunión</a>
@@ -1102,12 +1096,6 @@ function Footer() {
           <p className="mt-1 text-[11px] text-muted/70">
             Documento de trabajo para socios.
           </p>
-          <a
-            href="/tarjeta"
-            className="mt-2 inline-block text-xs text-accent underline-offset-2 hover:underline"
-          >
-            Ver Tarjeta de Presentación / QR →
-          </a>
         </div>
       </div>
     </footer>
